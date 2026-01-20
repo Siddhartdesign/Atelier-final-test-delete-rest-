@@ -443,8 +443,8 @@ function drawGrid(type, c = ctx){
   const h = canvas.height;
 
   c.strokeStyle = importedImage  
-    ? 'rgba(0,0,0,0.35)'  
-    : 'rgba(255,255,255,0.35)';
+ ? 'rgba(0,160,90,0.45)'   // dark green on image
+  : 'rgba(120,255,180,0.65)'; // bright green on camera
   c.lineWidth = 1.4;
 if(type === 'spiral'){
   const cx = w / 2;
@@ -527,7 +527,9 @@ function drawHarmonic(type, c = ctx){
   const w = canvas.width;
   const h = canvas.height;
 
-  c.strokeStyle = importedImage   ? 'rgba(0,0,0,0.35)'   : 'rgba(255,255,255,0.35)';
+  c.strokeStyle = importedImage
+  ? 'rgba(180,40,40,0.5)'    // deep red on image
+  : 'rgba(255,120,120,0.7)'; // bright red on camera
   c.lineWidth = 2.2;
 
   const r = {
