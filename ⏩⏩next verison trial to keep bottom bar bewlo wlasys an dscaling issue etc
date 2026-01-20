@@ -622,18 +622,18 @@ angleTool.onclick=()=>{
 };
 
 window.setGrid = t => {
-  state.grid = t;
-  state.harmonic = null;
+  state.grid = state.grid === t ? null : t; // toggle
   closePanel();
   requestDraw();
 };
 
 window.setHarmonic = t => {
-  state.harmonic = t;
-  state.grid = null;
+  state.harmonic = state.harmonic === t ? null : t; // toggle
   closePanel();
   requestDraw();
 };
+
+
 const importBtn = document.getElementById('importBtn');
 const saveBtn = document.getElementById('saveBtn');
 const clearBtn = document.getElementById('clearBtn');
